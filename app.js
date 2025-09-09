@@ -86,9 +86,9 @@ app.use("/listings/:id/reviews",reviewRouter);
 app.use("/", userRouter);
 
 
-app.use((req, res, next) => {
-    next(new ExpressError(404, "Page Not Found"));
-});
+// app.use((req, res, next) => {
+//     next(new ExpressError(404, "Page Not Found"));
+// });
 
 app.use((err, req, res, next) => {
     const { statusCode = 500, message = "Something went wrong" } = err;
